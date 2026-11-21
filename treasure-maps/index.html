@@ -2,56 +2,369 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Treasure Maps | Life With Pieter Swart</title>
 <style>
-*{box-sizing:border-box}
-body{margin:0;background:#000;color:#39ff14;font-family:"DejaVu Sans",Arial,sans-serif;line-height:1.7}
-header{padding:20px 6%;border-bottom:1px solid #245c20;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
-a{color:#39ff14}
-header a{text-decoration:none}
-nav{display:flex;gap:20px;flex-wrap:wrap}
-main{max-width:1050px;margin:auto;padding:45px 22px}
-.eyebrow{color:#a0b49b;letter-spacing:3px;font-size:12px}
-h1{font-size:clamp(30px,5vw,46px);margin:5px 0}
-.intro{color:#b8c5b3;max-width:720px}
-.map-card{margin-top:35px;padding:18px;background:#101510;border:1px solid #39ff14;border-radius:12px;display:grid;grid-template-columns:minmax(0,1fr) 1fr;gap:24px;align-items:center}
-.map-card img{width:100%;border-radius:7px;display:block}
-.map-card h2{line-height:1.3}
-.map-card p{color:#c0cbbd}
-.button{display:inline-block;padding:10px 18px;border:1px solid #39ff14;border-radius:5px;text-decoration:none;font-weight:bold}
-.button:hover{background:#39ff14;color:#000}
-footer{text-align:center;border-top:1px solid #245c20;padding:25px;color:#a0b49b}
-@media(max-width:650px){.map-card{grid-template-columns:1fr}}
+:root {
+    --green: #39ff14;
+    --dark-green: #123b12;
+    --black: #000000;
+}
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    padding: 25px;
+    background: var(--black);
+    color: var(--green);
+    font-family: Arial, sans-serif;
+}
+header {
+    max-width: 1100px;
+    margin: 0 auto 30px;
+    text-align: center;
+    border: 1px solid var(--green);
+    padding: 25px;
+    box-shadow: 0 0 14px #123b12;
+}
+h1 {
+    font-size: clamp(28px, 5vw, 46px);
+    margin: 8px 0;
+    text-shadow: 0 0 12px var(--green);
+}
+header p { color: #b4ffac; }
+nav { margin: 18px 0; }
+a { color: var(--green); }
+nav a { margin: 8px; text-decoration: none; }
+nav a:hover { text-decoration: underline; }
+main { max-width: 1100px; margin: auto; }
+.search-area { margin: 25px 0; }
+#search {
+    width: 100%;
+    padding: 15px;
+    background: #050505;
+    border: 1px solid var(--green);
+    color: var(--green);
+    font-size: 16px;
+    border-radius: 5px;
+}
+#search::placeholder { color: #80b878; }
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin: 18px 0;
+}
+.filter {
+    background: #050505;
+    color: var(--green);
+    border: 1px solid var(--green);
+    padding: 10px 14px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.filter:hover, .filter.active {
+    background: var(--green);
+    color: #000;
+    font-weight: bold;
+}
+#count { color: #b4ffac; margin: 15px 0; }
+.map-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+}
+.map-item {
+    display: flex;
+    gap: 15px;
+    padding: 18px;
+    border: 1px solid var(--dark-green);
+    border-radius: 7px;
+    background: #050505;
+    box-shadow: 0 0 8px #092209;
+    overflow-wrap: anywhere;
+}
+.map-item:hover {
+    border-color: var(--green);
+    box-shadow: 0 0 12px #145214;
+}
+.map-icon { font-size: 35px; }
+.map-info { min-width: 0; }
+.map-info h2 { font-size: 18px; margin: 2px 0 8px; }
+.category { color: #b4ffac; font-size: 13px; }
+.filepath { color: #8bba85; font-size: 12px; }
+.actions { display: flex; flex-wrap: wrap; gap: 15px; margin-top: 14px; }
+.actions a { font-size: 13px; font-weight: bold; }
+.empty { display: none; padding: 20px; border: 1px solid var(--green); }
+footer {
+    text-align: center;
+    margin: 45px auto 10px;
+    color: #80b878;
+}
+@media(max-width: 600px) {
+    body { padding: 12px; }
+    header { padding: 18px 10px; }
+}
 </style>
 </head>
 <body>
 <header>
-<a href="../index.html"><strong>PITA'S WORLD</strong></a>
-<nav>
-<a href="../index.html">HOME</a>
-<a href="../diary/">DIARY</a>
-<a href="./">TREASURE MAPS</a>
-<a href="../recipes/">RECIPES</a>
-</nav>
+    <h1>🗺️ TREASURE MAPS</h1>
+    <p>Explore the maps, discover hidden places and follow the trails.</p>
+    <nav>
+        <a href="../">HOME</a>
+        <a href="../diary/">DIARY</a>
+        <a href="../recipes/">RECIPES</a>
+        <a href="./map-001/">ILLUSTRATED MAP</a>
+    </nav>
 </header>
-<main>
-<p class="eyebrow">THE ADVENTURE COLLECTION</p>
-<h1>The Treasure Maps</h1>
-<p class="intro">A collection of illustrated maps, mysterious trails, hidden treasures and imagined adventures. Each map has its own story, artwork and clues.</p>
 
-<article class="map-card">
-<div>
-<img src="map-001/map.svg" alt="Illustrated antique parchment treasure map with mountains, forest, compass and a dotted trail to an X">
-</div>
-<div>
-<p class="eyebrow">MAP 001 · ILLUSTRATED ADVENTURE</p>
-<h2>The Forgotten Valley</h2>
-<p>An old-fashioned treasure map showing a winding trail through mountains, woodland, a river and forgotten ruins. This is an imaginative map, created for adventure and storytelling.</p>
-<a class="button" href="map-001/">EXPLORE THIS MAP →</a>
-</div>
-</article>
+<main>
+    <h2>THE TREASURE MAP COLLECTION</h2>
+    <p>Browse the collection, search for a map or select a folder category.</p>
+
+    <section class="search-area">
+        <input id="search" type="search"
+            placeholder="Search maps by name or folder...">
+    </section>
+
+    <div class="filters">
+        <button class="filter active" data-category="all">ALL MAPS</button>
+<button class="filter" data-category="Compiled PDFs">Compiled PDFs</button>
+<button class="filter" data-category="Main Collection">Main Collection</button>
+    </div>
+
+    <p id="count"></p>
+
+    <section class="map-list" id="map-list">
+        
+    <article class="map-item"
+        data-category="Main Collection"
+        data-search="bo kaap museum treasure unique small bo-kaap-museum-treasure-unique-small.pdf">
+        <div class="map-icon">🗺️</div>
+        <div class="map-info">
+            <h2>Bo Kaap Museum TREASURE UNIQUE SMALL</h2>
+            <p class="category">Main Collection</p>
+            <p class="filepath">Bo-Kaap-Museum-TREASURE-UNIQUE-SMALL.pdf</p>
+            <div class="actions">
+                <a href="files/Bo-Kaap-Museum-TREASURE-UNIQUE-SMALL.pdf" target="_blank" rel="noopener">OPEN MAP PDF</a>
+                <a href="files/Bo-Kaap-Museum-TREASURE-UNIQUE-SMALL.pdf" download>DOWNLOAD</a>
+            </div>
+        </div>
+    </article>
+    
+
+    <article class="map-item"
+        data-category="Compiled PDFs"
+        data-search="blue train park treasure unique final compiled pdfs/blue-train-park-treasure-unique-final.pdf">
+        <div class="map-icon">🗺️</div>
+        <div class="map-info">
+            <h2>Blue Train Park TREASURE UNIQUE FINAL</h2>
+            <p class="category">Compiled PDFs</p>
+            <p class="filepath">Compiled PDFs/Blue-Train-Park-TREASURE-UNIQUE-FINAL.pdf</p>
+            <div class="actions">
+                <a href="files/Compiled%20PDFs/Blue-Train-Park-TREASURE-UNIQUE-FINAL.pdf" target="_blank" rel="noopener">OPEN MAP PDF</a>
+                <a href="files/Compiled%20PDFs/Blue-Train-Park-TREASURE-UNIQUE-FINAL.pdf" download>DOWNLOAD</a>
+            </div>
+        </div>
+    </article>
+    
+
+    <article class="map-item"
+        data-category="Compiled PDFs"
+        data-search="boulders beach treasure story parow to boulders compiled pdfs/boulders-beach-treasure-story-parow-to-boulders.pdf">
+        <div class="map-icon">🗺️</div>
+        <div class="map-info">
+            <h2>Boulders Beach Treasure Story Parow To Boulders</h2>
+            <p class="category">Compiled PDFs</p>
+            <p class="filepath">Compiled PDFs/Boulders-Beach-Treasure-Story-Parow-To-Boulders.pdf</p>
+            <div class="actions">
+                <a href="files/Compiled%20PDFs/Boulders-Beach-Treasure-Story-Parow-To-Boulders.pdf" target="_blank" rel="noopener">OPEN MAP PDF</a>
+                <a href="files/Compiled%20PDFs/Boulders-Beach-Treasure-Story-Parow-To-Boulders.pdf" download>DOWNLOAD</a>
+            </div>
+        </div>
+    </article>
+    
+
+    <article class="map-item"
+        data-category="Compiled PDFs"
+        data-search="intaka island treasure unique small compiled pdfs/intaka-island-treasure-unique-small.pdf">
+        <div class="map-icon">🗺️</div>
+        <div class="map-info">
+            <h2>Intaka Island TREASURE UNIQUE SMALL</h2>
+            <p class="category">Compiled PDFs</p>
+            <p class="filepath">Compiled PDFs/Intaka-Island-TREASURE-UNIQUE-SMALL.pdf</p>
+            <div class="actions">
+                <a href="files/Compiled%20PDFs/Intaka-Island-TREASURE-UNIQUE-SMALL.pdf" target="_blank" rel="noopener">OPEN MAP PDF</a>
+                <a href="files/Compiled%20PDFs/Intaka-Island-TREASURE-UNIQUE-SMALL.pdf" download>DOWNLOAD</a>
+            </div>
+        </div>
+    </article>
+    
+
+    <article class="map-item"
+        data-category="Compiled PDFs"
+        data-search="kirstenbosch treasure retry small compiled pdfs/kirstenbosch-treasure-retry-small.pdf">
+        <div class="map-icon">🗺️</div>
+        <div class="map-info">
+            <h2>Kirstenbosch TREASURE RETRY SMALL</h2>
+            <p class="category">Compiled PDFs</p>
+            <p class="filepath">Compiled PDFs/Kirstenbosch-TREASURE-RETRY-SMALL.pdf</p>
+            <div class="actions">
+                <a href="files/Compiled%20PDFs/Kirstenbosch-TREASURE-RETRY-SMALL.pdf" target="_blank" rel="noopener">OPEN MAP PDF</a>
+                <a href="files/Compiled%20PDFs/Kirstenbosch-TREASURE-RETRY-SMALL.pdf" download>DOWNLOAD</a>
+            </div>
+        </div>
+    </article>
+    
+
+    <article class="map-item"
+        data-category="Compiled PDFs"
+        data-search="the cape wheel treasure unique small compiled pdfs/the-cape-wheel-treasure-unique-small.pdf">
+        <div class="map-icon">🗺️</div>
+        <div class="map-info">
+            <h2>The Cape Wheel TREASURE UNIQUE SMALL</h2>
+            <p class="category">Compiled PDFs</p>
+            <p class="filepath">Compiled PDFs/The-Cape-Wheel-TREASURE-UNIQUE-SMALL.pdf</p>
+            <div class="actions">
+                <a href="files/Compiled%20PDFs/The-Cape-Wheel-TREASURE-UNIQUE-SMALL.pdf" target="_blank" rel="noopener">OPEN MAP PDF</a>
+                <a href="files/Compiled%20PDFs/The-Cape-Wheel-TREASURE-UNIQUE-SMALL.pdf" download>DOWNLOAD</a>
+            </div>
+        </div>
+    </article>
+    
+
+    <article class="map-item"
+        data-category="Main Collection"
+        data-search="eden on the bay treasure story parow to bigbay eden-on-the-bay-treasure-story-parow-to-bigbay.pdf">
+        <div class="map-icon">🗺️</div>
+        <div class="map-info">
+            <h2>Eden On The Bay Treasure Story Parow To BigBay</h2>
+            <p class="category">Main Collection</p>
+            <p class="filepath">Eden-On-The-Bay-Treasure-Story-Parow-To-BigBay.pdf</p>
+            <div class="actions">
+                <a href="files/Eden-On-The-Bay-Treasure-Story-Parow-To-BigBay.pdf" target="_blank" rel="noopener">OPEN MAP PDF</a>
+                <a href="files/Eden-On-The-Bay-Treasure-Story-Parow-To-BigBay.pdf" download>DOWNLOAD</a>
+            </div>
+        </div>
+    </article>
+    
+
+    <article class="map-item"
+        data-category="Main Collection"
+        data-search="grandwest treasure final with notes full grandwest-treasure-final-with-notes-full.pdf">
+        <div class="map-icon">🗺️</div>
+        <div class="map-info">
+            <h2>GrandWest Treasure FINAL WITH NOTES FULL</h2>
+            <p class="category">Main Collection</p>
+            <p class="filepath">GrandWest-Treasure-FINAL-WITH-NOTES-FULL.pdf</p>
+            <div class="actions">
+                <a href="files/GrandWest-Treasure-FINAL-WITH-NOTES-FULL.pdf" target="_blank" rel="noopener">OPEN MAP PDF</a>
+                <a href="files/GrandWest-Treasure-FINAL-WITH-NOTES-FULL.pdf" download>DOWNLOAD</a>
+            </div>
+        </div>
+    </article>
+    
+
+    <article class="map-item"
+        data-category="Main Collection"
+        data-search="lions head treasure small lions-head-treasure-small.pdf">
+        <div class="map-icon">🗺️</div>
+        <div class="map-info">
+            <h2>Lions Head Treasure SMALL</h2>
+            <p class="category">Main Collection</p>
+            <p class="filepath">Lions-Head-Treasure-SMALL.pdf</p>
+            <div class="actions">
+                <a href="files/Lions-Head-Treasure-SMALL.pdf" target="_blank" rel="noopener">OPEN MAP PDF</a>
+                <a href="files/Lions-Head-Treasure-SMALL.pdf" download>DOWNLOAD</a>
+            </div>
+        </div>
+    </article>
+    
+
+    <article class="map-item"
+        data-category="Main Collection"
+        data-search="sonstraal duck pond treasure small sonstraal-duck-pond-treasure-small.pdf">
+        <div class="map-icon">🗺️</div>
+        <div class="map-info">
+            <h2>Sonstraal Duck Pond TREASURE SMALL</h2>
+            <p class="category">Main Collection</p>
+            <p class="filepath">Sonstraal-Duck-Pond-TREASURE-SMALL.pdf</p>
+            <div class="actions">
+                <a href="files/Sonstraal-Duck-Pond-TREASURE-SMALL.pdf" target="_blank" rel="noopener">OPEN MAP PDF</a>
+                <a href="files/Sonstraal-Duck-Pond-TREASURE-SMALL.pdf" download>DOWNLOAD</a>
+            </div>
+        </div>
+    </article>
+    
+
+    <article class="map-item"
+        data-category="Main Collection"
+        data-search="two oceans aquarium treasure final two-oceans-aquarium-treasure-final.pdf">
+        <div class="map-icon">🗺️</div>
+        <div class="map-info">
+            <h2>Two Oceans Aquarium TREASURE FINAL</h2>
+            <p class="category">Main Collection</p>
+            <p class="filepath">Two-Oceans-Aquarium-TREASURE-FINAL.pdf</p>
+            <div class="actions">
+                <a href="files/Two-Oceans-Aquarium-TREASURE-FINAL.pdf" target="_blank" rel="noopener">OPEN MAP PDF</a>
+                <a href="files/Two-Oceans-Aquarium-TREASURE-FINAL.pdf" download>DOWNLOAD</a>
+            </div>
+        </div>
+    </article>
+    
+    </section>
+
+    <p class="empty" id="empty">No maps match your search.</p>
 </main>
-<footer>LIFE WITH PIETER SWART · THE ADVENTURE COLLECTION</footer>
+
+<footer>
+    LIFE WITH PIETER SWART · TREASURE MAP COLLECTION
+</footer>
+
+<script>
+const search = document.getElementById("search");
+const filters = document.querySelectorAll(".filter");
+const cards = document.querySelectorAll(".map-item");
+const count = document.getElementById("count");
+const empty = document.getElementById("empty");
+
+let selectedCategory = "all";
+
+function updateMaps() {
+    const term = search.value.toLowerCase().trim();
+    let visible = 0;
+
+    cards.forEach(card => {
+        const matchesCategory =
+            selectedCategory === "all" ||
+            card.dataset.category === selectedCategory;
+
+        const matchesSearch =
+            card.dataset.search.includes(term);
+
+        const show = matchesCategory && matchesSearch;
+        card.style.display = show ? "flex" : "none";
+
+        if (show) visible++;
+    });
+
+    count.textContent =
+        "Showing " + visible + " of " + cards.length + " maps";
+
+    empty.style.display = visible === 0 ? "block" : "none";
+}
+
+filters.forEach(button => {
+    button.addEventListener("click", () => {
+        filters.forEach(item => item.classList.remove("active"));
+        button.classList.add("active");
+        selectedCategory = button.dataset.category;
+        updateMaps();
+    });
+});
+
+search.addEventListener("input", updateMaps);
+updateMaps();
+</script>
 </body>
 </html>
