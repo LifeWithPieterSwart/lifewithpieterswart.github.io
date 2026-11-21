@@ -1,0 +1,26 @@
+[
+  {
+    "image": "images/photo-1.jpg",
+    "caption": "A favourite memory"
+  },
+  {
+    "image": "images/photo-2.jpg",
+    "caption": "Out exploring"
+  },
+  {
+    "image": "images/photo-3.jpg",
+    "caption": "A place to remember"
+  },
+  {
+    "image": "images/photo-4.jpg",
+    "caption": "The open road"
+  },
+  {
+    "image": "images/photo-5.jpg",
+    "caption": "Camp life"
+  },
+  {
+    "image": "images/photo-6.jpg",
+    "caption": "Another adventure"
+  }
+]

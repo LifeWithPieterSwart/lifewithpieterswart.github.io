@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pita's World — adventures, camping, photographs and personal memories.">
+  <meta name="theme-color" content="#050805">
+  <title>Pita's World | Adventures & Memories</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home"><span class="brand-mark">P</span><span>PITA'S <b>WORLD</b></span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav id="mainNav">
+      <a href="#home">HOME</a>
+      <a href="#gallery">GALLERY</a>
+      <a href="#adventures">ADVENTURES</a>
+      <a href="#diary">DIARY</a>
+      <a href="#about">ABOUT</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="eyebrow">A PERSONAL COLLECTION OF LIFE'S JOURNEYS</p>
+        <h1>THE WORLD IS<br><span>WAITING.</span></h1>
+        <p class="hero-copy">Roads to travel. Places to discover. Moments worth remembering.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#adventures">EXPLORE STORIES</a>
+          <a class="button button-outline" href="#gallery">VIEW GALLERY</a>
+        </div>
+      </div>
+      <div class="hero-label">ADVENTURE • CAMPING • MEMORIES</div>
+    </section>
+
+    <section class="intro section-wrap">
+      <p class="eyebrow">WELCOME TO MY WORLD</p>
+      <h2>Every journey has a <span>story.</span></h2>
+      <p>This is my personal corner of the internet — a place for photographs, motorcycle adventures, camping trips and diary entries. Pull up a chair and have a look around.</p>
+    </section>
+
+    <section class="section-wrap" id="gallery">
+      <div class="section-heading">
+        <div><p class="eyebrow">THE MOMENTS WE KEEP</p><h2>Photo <span>gallery</span></h2></div>
+        <p class="section-note">A few frames from the journey.</p>
+      </div>
+      <div class="gallery-grid" id="galleryGrid"></div>
+    </section>
+
+    <section class="dark-band" id="adventures">
+      <div class="section-wrap">
+        <div class="section-heading">
+          <div><p class="eyebrow">OUT ON THE ROAD</p><h2>Travel & <span>adventures</span></h2></div>
+          <p class="section-note">Routes, campsites and memories made along the way.</p>
+        </div>
+        <div class="story-grid" id="adventureGrid"></div>
+      </div>
+    </section>
+
+    <section class="section-wrap" id="diary">
+      <div class="section-heading">
+        <div><p class="eyebrow">NOTES FROM EVERYDAY LIFE</p><h2>From my <span>diary</span></h2></div>
+        <p class="section-note">Thoughts, experiences and little pieces of history.</p>
+      </div>
+      <div class="diary-list" id="diaryList"></div>
+    </section>
+
+    <section class="about section-wrap" id="about">
+      <div class="about-symbol">P.</div>
+      <div>
+        <p class="eyebrow">A LITTLE ABOUT ME</p>
+        <h2>Hello, I'm <span>Pita.</span></h2>
+        <p>Welcome to my personal website. I created this space to keep my photographs, travel stories, camping adventures and memories together. This is a work in progress, and the best stories are still being written.</p>
+        <a class="text-link" href="mailto:hello@example.com">GET IN TOUCH ↗</a>
+        <p class="small-note">Remember to replace this example email address with your own before publishing.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand" href="#home"><span class="brand-mark">P</span><span>PITA'S <b>WORLD</b></span></a>
+    <p>Made with care. Powered by memories.</p>
+    <p class="copyright">© <span id="year"></span> Pita's World</p>
+  </footer>
+
+  <dialog id="photoDialog" class="photo-dialog">
+    <button class="dialog-close" id="dialogClose" aria-label="Close">×</button>
+    <img id="dialogImage" src="" alt="">
+    <p id="dialogCaption"></p>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>

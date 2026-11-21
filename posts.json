@@ -1,0 +1,32 @@
+[
+  {
+    "category": "adventure",
+    "date": "2026-11-21",
+    "title": "A road waiting to be travelled",
+    "excerpt": "Replace this sample with a real motorcycle trip, the route you followed and the places you discovered."
+  },
+  {
+    "category": "adventure",
+    "date": "2026-11-21",
+    "title": "A night under the stars",
+    "excerpt": "Write about a campsite, the evening meal, the weather and what made the place memorable."
+  },
+  {
+    "category": "adventure",
+    "date": "2026-11-21",
+    "title": "Discovering the Western Cape",
+    "excerpt": "Add a favourite destination, practical travel notes and photographs from your visit."
+  },
+  {
+    "category": "diary",
+    "date": "2026-11-21",
+    "title": "The beginning of this website",
+    "excerpt": "This website is a place to collect photographs, stories and memories. Replace this sample with your own diary entry."
+  },
+  {
+    "category": "diary",
+    "date": "2026-11-21",
+    "title": "A small moment worth keeping",
+    "excerpt": "Add a short personal memory here. Keep it true to what happened and write in your own voice."
+  }
+]
