@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pita's Recipe Collection</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#000;color:#39ff14;font-family:Arial,sans-serif;line-height:1.6}
+header{padding:20px 5%;border-bottom:1px solid #245c20}
+a{color:#39ff14}
+nav{display:flex;gap:20px;flex-wrap:wrap}
+nav a{text-decoration:none}
+main{max-width:1150px;margin:auto;padding:35px 20px}
+h1{font-size:38px}
+.intro{color:#b8c5b3}
+#search{width:100%;padding:14px;background:#101510;color:#39ff14;border:1px solid #39ff14;border-radius:6px;font-size:16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:25px}
+.recipe{background:#101510;border:1px solid #245c20;border-radius:8px;padding:18px;overflow-wrap:anywhere}
+.recipe h2{font-size:18px}
+.recipe p,.recipe small{color:#b8c5b3}
+.recipe a{display:inline-block;border:1px solid #39ff14;padding:7px 10px;text-decoration:none;border-radius:4px;font-size:12px}
+.recipe a:hover{background:#39ff14;color:#000}
+footer{text-align:center;padding:25px;border-top:1px solid #245c20;color:#a0b49b;margin-top:40px}
+</style>
+</head>
+<body>
+<header>
+<strong>PITA'S WORLD</strong>
+<nav>
+<a href="../index.html">HOME</a>
+<a href="../diary/">DIARY</a>
+<a href="../treasure-maps/">TREASURE MAPS</a>
+<a href="./">RECIPES</a>
+</nav>
+</header>
+<main>
+<p>FROM PITA'S PERSONAL KITCHEN</p>
+<h1>The Recipe Collection</h1>
+<p class="intro">Browse the original recipe documents, open them online or download them to keep.</p>
+<p>36 original recipe documents</p>
+<input id="search" type="search" placeholder="Search recipes or categories...">
+<div class="grid" id="recipes">
+
+    <article class="recipe" data-search="creamy mushroom sauce recipe compiled pdfs">
+      <p>Compiled PDFs</p>
+      <h2>Creamy Mushroom Sauce Recipe</h2>
+      <small>PDF · 1.9 MB</small>
+      <p><a href="files/Compiled%20PDFs/Creamy%20Mushroom%20Sauce%20Recipe.pdf" target="_blank" rel="noopener">OPEN RECIPE</a>
+      &nbsp; <a href="files/Compiled%20PDFs/Creamy%20Mushroom%20Sauce%20Recipe.pdf" download>DOWNLOAD</a></p>
+    </article>
+    
+
+    <article class="recipe" data-search="macaroni and cheese recipe compiled pdfs">
+      <p>Compiled PDFs</p>
+      <h2>Macaroni and Cheese Recipe</h2>
+      <small>PDF · 3.0 MB</small>
+      <p><a href="files/Compiled%20PDFs/Macaroni%20and%20Cheese%20Recipe.pdf" target="_blank" rel="noopener">OPEN RECIPE</a>
+      &nbsp; <a href="files/Compiled%20PDFs/Macaroni%20and%20Cheese%20Recipe.pdf" download>DOWNLOAD</a></p>
+    </article>
+    
+
+    <article class="recipe" data-search="peppercorn sauce recipe compiled pdfs">
+      <p>Compiled PDFs</p>
+      <h2>Peppercorn Sauce Recipe</h2>
+      <small>PDF · 2.1 MB</small>
+      <p><a href="files/Compiled%20PDFs/Peppercorn%20Sauce%20Recipe.pdf" target="_blank" rel="noopener">OPEN RECIPE</a>
+      &nbsp; <a href="files/Compiled%20PDFs/Peppercorn%20Sauce%20Recipe.pdf" download>DOWNLOAD</a></p>
+    </article>
+    
+
+    <article class="recipe" data-search="pita road side cowboy pot recipe compiled pdfs">
+      <p>Compiled PDFs</p>
+      <h2>Pita Road side Cowboy Pot Recipe</h2>
+      <small>PDF · 3.5 MB</small>
+      <p><a href="files/Compiled%20PDFs/Pita%20Road%20side%20Cowboy%20Pot%20Recipe.pdf" target="_blank" rel="noopener">OPEN RECIPE</a>
+      &nbsp; <a href="files/Compiled%20PDFs/Pita%20Road%20side%20Cowboy%20Pot%20Recipe.pdf" download>DOWNLOAD</a></p>
+    </article>
+    
+
+    <article class="recipe" data-search="pitas personal chronicle roadside cowboy pot compiled pdfs">
+      <p>Compiled PDFs</p>
+      <h2>Pitas Personal Chronicle Roadside Cowboy Pot</h2>
+      <small>PDF · 1.6 MB</small>
+      <p><a href="files/Compiled%20PDFs/Pitas-Personal-Chronicle-Roadside-Cowboy-Pot.pdf" target="_blank" rel="noopener">OPEN RECIPE</a>
+      &nbsp; <a href="files/Compiled%20PDFs/Pitas-Personal-Chronicle-Roadside-Cowboy-Pot.pdf" download>DOWNLOAD</a></p>
+    </article>
+    
+
+    <article class="recipe" data-search="pitas story roadside cowboy pot fullbleed compiled pdfs">
+      <p>Compiled PDFs</p>
+      <h2>Pitas Story Roadside Cowboy Pot FullBleed</h2>
+      <small>PDF · 3.3 MB</small>
+      <p><a href="files/Compiled%20PDFs/Pitas-Story-Roadside-Cowboy-Pot-FullBleed.pdf" target="_blank" rel="noopener">OPEN RECIPE</a>
+      &nbsp; <a href="files/Compiled%20PDFs/Pitas-Story-Roadside-Cowboy-Pot-FullBleed.pdf" download>DOWNLOAD</a></p>
+    </article>
+    
+
+    <article class="recipe" data-search="sunset boerie tomato pot recipe compiled pdfs">
+      <p>Compiled PDFs</p>
+      <h2>Sunset Boerie Tomato Pot Recipe</h2>
+      <small>PDF · 1.4 MB</small>
+      <p><a href="files/Compiled%20PDFs/Sunset-Boerie-Tomato-Pot-Recipe.pdf" target="_blank" rel="noopener">OPEN RECIPE</a>
+      &nbsp; <a href="files/Compiled%20PDFs/Sunset-Boerie-Tomato-Pot-Recipe.pdf" download>DOWNLOAD</a></p>
+    </article>
+    
+
+    <article class="recipe" data-search="gentlemans kitchen macaroni cheese 1887 full page main collection">
+      <p>Main collection</p>
+      <h2>Gentlemans Kitchen Macaroni Cheese 1887 FULL PAGE</h2>
+      <small>PDF · 1.8 MB</small>
+      <p><a href="files/Gentlemans-Kitchen-Macaroni-Cheese-1887-FULL-PAGE.pdf" target="_blank" rel="noopener">OPEN RECIPE</a>
+      &nbsp; <a href="files/Gentlemans-Kitchen-Macaroni-Cheese-1887-FULL-PAGE.pdf" download>DOWNLOAD</a></p>
+    </article>
+    
+
+    <article class="recipe" data-search="gentlemans kitchen savory rice full page main collection">
+      <p>Main collection</p>
+      <h2>Gentlemans Kitchen Savory Rice FULL PAGE</h2>
+      <small>PDF · 1.8 MB</small>
+      <p><a href="files/Gentlemans-Kitchen-Savory-Rice-FULL-PAGE.pdf" target="_blank" rel="noopener">OPEN RECIPE</a>
+      &nbsp; <a href="files/Gentlemans-Kitchen-Savory-Rice-FULL-PAGE.pdf" download>DOWNLOAD</a></p>
+    </article>
+    
+
+    <article class="recipe" data-search="gentlemans kitchen sweet spicy mango sauce full page main collection">
+      <p>Main collection</p>
+      <h2>Gentlemans Kitchen Sweet Spicy Mango Sauce FULL PAGE</h2>
+      <small>PDF · 2.0 MB</small>
+      <p><a href="files/Gentlemans-Kitchen-Sweet-Spicy-Mango-Sauce-FULL-PAGE.pdf" target="_blank" rel="noopener">OPEN RECIPE</a>
+      &nbsp; <a href="files/Gentlemans-Kitchen-Sweet-Spicy-Mango-Sauce-FULL-PAGE.pdf" download>DOWNLOAD</a></p>
+    </article>
+    
+
+    <article class="recipe" data-search="pita minute steaks unnumbered no white main collection">
+      <p>Main collection</p>
+      <h2>Pita Minute Steaks Unnumbered NO WHITE</h2>
+      <small>PDF · 5.0 MB</small>
+      <p><a href="files/Pita-Minute-Steaks-Unnumbered-NO-WHITE.pdf" target="_blank" rel="noopener">OPEN RECIPE</a>
+      &nbsp; <a href="files/Pita-Minute-Steaks-Unnumbered-NO-WHITE.pdf" download>DOWNLOAD</a></p>
+    </article>
+    
+
+    <article class="recipe" data-search="pita recipe creamy chicken mushroom pasta main collection">
+      <p>Main collection</p>
+      <h2>Pita Recipe Creamy Chicken Mushroom Pasta</h2>
+      <small>PDF · 1.3 MB</small>
+      <p><a href="files/Pita-Recipe-Creamy-Chicken-Mushroom-Pasta.pdf" target="_blank" rel="noopener">OPEN RECIPE</a>
+      &nbsp; <a href="files/Pita-Recipe-Creamy-Chicken-Mushroom-Pasta.pdf" download>DOWNLOAD</a></p>
+    </article>
+    
+
+    <article class="recipe" data-search="pitas bacon breakfast pan story and recipe combined main collection">
+      <p>Main collection</p>
+      <h2>Pitas Bacon Breakfast Pan Story And Recipe Combined</h2>
+      <small>PDF · 3.1 MB</small>
+      <p><a href="files/Pitas-Bacon-Breakfast-Pan-Story-And-Recipe-Combined.pdf" target="_blank" rel="noopener">OPEN RECIPE</a>
+      &nbsp; <a href="files/Pitas-Bacon-Breakfast-Pan-Story-And-Recipe-Combined.pdf" download>DOWNLOAD</a></p>
+    </article>
+    
+
+    <article class="recipe" data-search="pitas creamy porridge lemon butter bbq story and recipe combined main collection">
+      <p>Main collection</p>
+      <h2>Pitas Creamy Porridge Lemon Butter BBQ Story And Recipe Combined</h2>
+      <small>PDF · 3.0 MB</small>
+      <p><a href="files/Pitas-Creamy-Porridge-Lemon-Butter-BBQ-Story-And-Recipe-Combined.pdf" target="_blank" rel="noopener">OPEN RECIPE</a>
+      &nbsp; <a href="files/Pitas-Creamy-Porridge-Lemon-Butter-BBQ-Story-And-Recipe-Combined.pdf" download>DOWNLOAD</a></p>
+    </article>
+    
+
+    <article class="recipe" data-search="pitas kitchen bikers creamy bacon mushroom toasted pot complete main collection">
+      <p>Main collection</p>
+      <h2>Pitas Kitchen Bikers Creamy Bacon Mushroom Toasted Pot COMPLETE</h2>
+      <small>PDF · 15.8 MB</small>
+      <p><a href="files/Pitas-Kitchen-Bikers-Creamy-Bacon-Mushroom-Toasted-Pot-COMPLETE.pdf" target="_blank" rel="noopener">OPEN RECIPE</a>
+      &nbsp; <a href="files/Pitas-Kitchen-Bikers-Creamy-Bacon-Mushroom-Toasted-Pot-COMPLETE.pdf" download>DOWNLOAD</a></p>
+    </article>
+    
+
+    <article class="recipe" data-search="pitas kitchen boerewors melt golden cheese pull main collection">
+      <p>Main collection</p>
+      <h2>Pitas Kitchen Boerewors Melt Golden Cheese Pull</h2>
+      <small>PDF · 16.7 MB</small>
+      <p><a href="files/Pitas-Kitchen-Boerewors-Melt-Golden-Cheese-Pull.pdf" target="_blank" rel="noopener">OPEN RECIPE</a>
+      &nbsp; <a href="files/Pitas-Kitchen-Boerewors-Melt-Golden-Cheese-Pull.pdf" download>DOWNLOAD</a></p>
+    </article>
+    
+
+    <article class="recipe" data-search="pitas kitchen coastal fisherman garlic prawns complete different scenery main collection">
+      <p>Main collection</p>
+      <h2>Pitas Kitchen Coastal Fisherman Garlic Prawns Complete Different Scenery</h2>
+      <small>PDF · 15.2 MB</small>
+      <p><a href="files/Pitas-Kitchen-Coastal-Fisherman-Garlic-Prawns-Complete-Different-Scenery.pdf" target="_blank" rel="noopener">OPEN RECIPE</a>
+      &nbsp; <a href="files/Pitas-Kitchen-Coastal-Fisherman-Garlic-Prawns-Complete-Different-Scenery.pdf" download>DOWNLOAD</a></p>
+    </article>
+    
+
+    <article class="recipe" data-search="pitas kitchen highlanders golden pumpkin soup triple checked main collection">
+      <p>Main collection</p>
+      <h2>Pitas Kitchen Highlanders Golden Pumpkin Soup TRIPLE CHECKED</h2>
+      <small>PDF · 16.4 MB</small>
+      <p><a href="files/Pitas-Kitchen-Highlanders-Golden-Pumpkin-Soup-TRIPLE-CHECKED.pdf" target="_blank" rel="noopener">OPEN RECIPE</a>
+      &nbsp; <a href="files/Pitas-Kitchen-Highlanders-Golden-Pumpkin-Soup-TRIPLE-CHECKED.pdf" download>DOWNLOAD</a></p>
+    </article>
+    
+
+    <article class="recipe" data-search="pitas kitchen karoo lamb potjie complete main collection">
+      <p>Main collection</p>
+      <h2>Pitas Kitchen Karoo Lamb Potjie Complete</h2>
+      <small>PDF · 16.7 MB</small>
+      <p><a href="files/Pitas-Kitchen-Karoo-Lamb-Potjie-Complete.pdf" target="_blank" rel="noopener">OPEN RECIPE</a>
+      &nbsp; <a href="files/Pitas-Kitchen-Karoo-Lamb-Potjie-Complete.pdf" download>DOWNLOAD</a></p>
+    </article>
+    
+
+    <article class="recipe" data-search="pitas kitchen open road boerewors melt triple checked main collection">
+      <p>Main collection</p>
+      <h2>Pitas Kitchen Open Road Boerewors Melt TRIPLE CHECKED</h2>
+      <small>PDF · 16.3 MB</small>
+      <p><a href="files/Pitas-Kitchen-Open-Road-Boerewors-Melt-TRIPLE-CHECKED.pdf" target="_blank" rel="noopener">OPEN RECIPE</a>
+      &nbsp; <a href="files/Pitas-Kitchen-Open-Road-Boerewors-Melt-TRIPLE-CHECKED.pdf" download>DOWNLOAD</a></p>
+    </article>
+    
+
+    <article class="recipe" data-search="pitas kitchen sweet sticky pineapple complete main collection">
+      <p>Main collection</p>
+      <h2>Pitas Kitchen Sweet Sticky Pineapple Complete</h2>
+      <small>PDF · 16.5 MB</small>
+      <p><a href="files/Pitas-Kitchen-Sweet-Sticky-Pineapple-Complete.pdf" target="_blank" rel="noopener">OPEN RECIPE</a>
+      &nbsp; <a href="files/Pitas-Kitchen-Sweet-Sticky-Pineapple-Complete.pdf" download>DOWNLOAD</a></p>
+    </article>
+    
+
+    <article class="recipe" data-search="pitas kitchen triple checked final main collection">
+      <p>Main collection</p>
+      <h2>Pitas Kitchen TRIPLE CHECKED Final</h2>
+      <small>PDF · 16.2 MB</small>
+      <p><a href="files/Pitas-Kitchen-TRIPLE-CHECKED-Final.pdf" target="_blank" rel="noopener">OPEN RECIPE</a>
+      &nbsp; <a href="files/Pitas-Kitchen-TRIPLE-CHECKED-Final.pdf" download>DOWNLOAD</a></p>
+    </article>
+    
+
+    <article class="recipe" data-search="pitas kitchen wild mountain breakfast skillet triple checked main collection">
+      <p>Main collection</p>
+      <h2>Pitas Kitchen Wild Mountain Breakfast Skillet TRIPLE CHECKED</h2>
+      <small>PDF · 15.6 MB</small>
+      <p><a href="files/Pitas-Kitchen-Wild-Mountain-Breakfast-Skillet-TRIPLE-CHECKED.pdf" target="_blank" rel="noopener">OPEN RECIPE</a>
+      &nbsp; <a href="files/Pitas-Kitchen-Wild-Mountain-Breakfast-Skillet-TRIPLE-CHECKED.pdf" download>DOWNLOAD</a></p>
+    </article>
+    
+
+    <article class="recipe" data-search="pitas personal chronicle fishcakes no white main collection">
+      <p>Main collection</p>
+      <h2>Pitas Personal Chronicle FishCakes NO WHITE</h2>
+      <small>PDF · 4.9 MB</small>
+      <p><a href="files/Pitas-Personal-Chronicle-FishCakes-NO-WHITE.pdf" target="_blank" rel="noopener">OPEN RECIPE</a>
+      &nbsp; <a href="files/Pitas-Personal-Chronicle-FishCakes-NO-WHITE.pdf" download>DOWNLOAD</a></p>
+    </article>
+    
+
+    <article class="recipe" data-search="pitas personal chronicle fishcakes main collection">
+      <p>Main collection</p>
+      <h2>Pitas Personal Chronicle FishCakes</h2>
+      <small>PDF · 4.5 MB</small>
+      <p><a href="files/Pitas-Personal-Chronicle-FishCakes.pdf" target="_blank" rel="noopener">OPEN RECIPE</a>
+      &nbsp; <a href="files/Pitas-Personal-Chronicle-FishCakes.pdf" download>DOWNLOAD</a></p>
+    </article>
+    
+
+    <article class="recipe" data-search="pitas personal chronicle recipe17 bacon mushroom toasted pot no white main collection">
+      <p>Main collection</p>
+      <h2>Pitas Personal Chronicle Recipe17 Bacon Mushroom Toasted Pot NO WHITE</h2>
+      <small>PDF · 4.7 MB</small>
+      <p><a href="files/Pitas-Personal-Chronicle-Recipe17-Bacon-Mushroom-Toasted-Pot-NO-WHITE.pdf" target="_blank" rel="noopener">OPEN RECIPE</a>
+      &nbsp; <a href="files/Pitas-Personal-Chronicle-Recipe17-Bacon-Mushroom-Toasted-Pot-NO-WHITE.pdf" download>DOWNLOAD</a></p>
+    </article>
+    
+
+    <article class="recipe" data-search="pitas personal chronicle recipe17 bacon mushroom toasted pot main collection">
+      <p>Main collection</p>
+      <h2>Pitas Personal Chronicle Recipe17 Bacon Mushroom Toasted Pot</h2>
+      <small>PDF · 4.3 MB</small>
+      <p><a href="files/Pitas-Personal-Chronicle-Recipe17-Bacon-Mushroom-Toasted-Pot.pdf" target="_blank" rel="noopener">OPEN RECIPE</a>
+      &nbsp; <a href="files/Pitas-Personal-Chronicle-Recipe17-Bacon-Mushroom-Toasted-Pot.pdf" download>DOWNLOAD</a></p>
+    </article>
+    
+
+    <article class="recipe" data-search="pitas personal chronicle recipe18 chicken sweetcorn pap pot no white main collection">
+      <p>Main collection</p>
+      <h2>Pitas Personal Chronicle Recipe18 Chicken Sweetcorn Pap Pot NO WHITE</h2>
+      <small>PDF · 5.0 MB</small>
+      <p><a href="files/Pitas-Personal-Chronicle-Recipe18-Chicken-Sweetcorn-Pap-Pot-NO-WHITE.pdf" target="_blank" rel="noopener">OPEN RECIPE</a>
+      &nbsp; <a href="files/Pitas-Personal-Chronicle-Recipe18-Chicken-Sweetcorn-Pap-Pot-NO-WHITE.pdf" download>DOWNLOAD</a></p>
+    </article>
+    
+
+    <article class="recipe" data-search="pitas personal chronicle recipe19 boerewors egg skillet no white main collection">
+      <p>Main collection</p>
+      <h2>Pitas Personal Chronicle Recipe19 Boerewors Egg Skillet NO WHITE</h2>
+      <small>PDF · 4.8 MB</small>
+      <p><a href="files/Pitas-Personal-Chronicle-Recipe19-Boerewors-Egg-Skillet-NO-WHITE.pdf" target="_blank" rel="noopener">OPEN RECIPE</a>
+      &nbsp; <a href="files/Pitas-Personal-Chronicle-Recipe19-Boerewors-Egg-Skillet-NO-WHITE.pdf" download>DOWNLOAD</a></p>
+    </article>
+    
+
+    <article class="recipe" data-search="pitas personal chronicle recipe20 curried mince vetkoek no white main collection">
+      <p>Main collection</p>
+      <h2>Pitas Personal Chronicle Recipe20 Curried Mince Vetkoek NO WHITE</h2>
+      <small>PDF · 5.1 MB</small>
+      <p><a href="files/Pitas-Personal-Chronicle-Recipe20-Curried-Mince-Vetkoek-NO-WHITE.pdf" target="_blank" rel="noopener">OPEN RECIPE</a>
+      &nbsp; <a href="files/Pitas-Personal-Chronicle-Recipe20-Curried-Mince-Vetkoek-NO-WHITE.pdf" download>DOWNLOAD</a></p>
+    </article>
+    
+
+    <article class="recipe" data-search="pitas personal chronicle recipe21 rooibos malva pudding no white main collection">
+      <p>Main collection</p>
+      <h2>Pitas Personal Chronicle Recipe21 Rooibos Malva Pudding NO WHITE</h2>
+      <small>PDF · 5.0 MB</small>
+      <p><a href="files/Pitas-Personal-Chronicle-Recipe21-Rooibos-Malva-Pudding-NO-WHITE.pdf" target="_blank" rel="noopener">OPEN RECIPE</a>
+      &nbsp; <a href="files/Pitas-Personal-Chronicle-Recipe21-Rooibos-Malva-Pudding-NO-WHITE.pdf" download>DOWNLOAD</a></p>
+    </article>
+    
+
+    <article class="recipe" data-search="pitas personal chronicle recipe22 snoek sweetpotato no white main collection">
+      <p>Main collection</p>
+      <h2>Pitas Personal Chronicle Recipe22 Snoek SweetPotato NO WHITE</h2>
+      <small>PDF · 5.1 MB</small>
+      <p><a href="files/Pitas-Personal-Chronicle-Recipe22-Snoek-SweetPotato-NO-WHITE.pdf" target="_blank" rel="noopener">OPEN RECIPE</a>
+      &nbsp; <a href="files/Pitas-Personal-Chronicle-Recipe22-Snoek-SweetPotato-NO-WHITE.pdf" download>DOWNLOAD</a></p>
+    </article>
+    
+
+    <article class="recipe" data-search="pitas personal chronicle recipe23 tomato bean boerewors potjie no white 1 main collection">
+      <p>Main collection</p>
+      <h2>Pitas Personal Chronicle Recipe23 Tomato Bean Boerewors Potjie NO WHITE 1</h2>
+      <small>PDF · 5.0 MB</small>
+      <p><a href="files/Pitas-Personal-Chronicle-Recipe23-Tomato-Bean-Boerewors-Potjie-NO-WHITE-1.pdf" target="_blank" rel="noopener">OPEN RECIPE</a>
+      &nbsp; <a href="files/Pitas-Personal-Chronicle-Recipe23-Tomato-Bean-Boerewors-Potjie-NO-WHITE-1.pdf" download>DOWNLOAD</a></p>
+    </article>
+    
+
+    <article class="recipe" data-search="pitas personal chronicle recipe23 tomato bean boerewors potjie no white main collection">
+      <p>Main collection</p>
+      <h2>Pitas Personal Chronicle Recipe23 Tomato Bean Boerewors Potjie NO WHITE</h2>
+      <small>PDF · 5.0 MB</small>
+      <p><a href="files/Pitas-Personal-Chronicle-Recipe23-Tomato-Bean-Boerewors-Potjie-NO-WHITE.pdf" target="_blank" rel="noopener">OPEN RECIPE</a>
+      &nbsp; <a href="files/Pitas-Personal-Chronicle-Recipe23-Tomato-Bean-Boerewors-Potjie-NO-WHITE.pdf" download>DOWNLOAD</a></p>
+    </article>
+    
+
+    <article class="recipe" data-search="pitas personal chronicle recipe24 honey mustard chicken no white main collection">
+      <p>Main collection</p>
+      <h2>Pitas Personal Chronicle Recipe24 Honey Mustard Chicken NO WHITE</h2>
+      <small>PDF · 5.1 MB</small>
+      <p><a href="files/Pitas-Personal-Chronicle-Recipe24-Honey-Mustard-Chicken-NO-WHITE.pdf" target="_blank" rel="noopener">OPEN RECIPE</a>
+      &nbsp; <a href="files/Pitas-Personal-Chronicle-Recipe24-Honey-Mustard-Chicken-NO-WHITE.pdf" download>DOWNLOAD</a></p>
+    </article>
+    
+
+    <article class="recipe" data-search="pitas yellowtail tomato olive sauce story and recipe combined main collection">
+      <p>Main collection</p>
+      <h2>Pitas Yellowtail Tomato Olive Sauce Story And Recipe Combined</h2>
+      <small>PDF · 3.1 MB</small>
+      <p><a href="files/Pitas-Yellowtail-Tomato-Olive-Sauce-Story-And-Recipe-Combined.pdf" target="_blank" rel="noopener">OPEN RECIPE</a>
+      &nbsp; <a href="files/Pitas-Yellowtail-Tomato-Olive-Sauce-Story-And-Recipe-Combined.pdf" download>DOWNLOAD</a></p>
+    </article>
+    
+</div>
+</main>
+<footer>LIFE WITH PIETER SWART · GOOD FOOD AND GOOD MEMORIES</footer>
+<script>
+document.getElementById('search').addEventListener('input', function(){
+ const term=this.value.toLowerCase().trim();
+ document.querySelectorAll('.recipe').forEach(card=>{
+  card.style.display=card.dataset.search.includes(term)?'':'none';
+ });
+});
+</script>
+</body>
+</html>
