@@ -1,99 +1,70 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Pita's World — adventures, camping, photographs and personal memories.">
-  <meta name="theme-color" content="#050805">
-  <title>Pita's World | Adventures & Memories</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#000000">
+<meta name="description" content="Life With Pieter Swart: personal diaries, photographs, motorcycle adventures, camping, recipes and treasure maps.">
+<title>Life With Pieter Swart | Journeys, Stories & Memories</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/style.css">
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="#home"><span class="brand-mark">P</span><span>PITA'S <b>WORLD</b></span></a>
-    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
-    <nav id="mainNav">
-      <a href="#home">HOME</a>
-      <a href="#gallery">GALLERY</a>
-      <a href="#adventures">ADVENTURES</a>
-      <a href="diary/">DIARY</a>
-      <a href="treasure-maps/">TREASURE MAPS</a>
-      <a href="recipes/">RECIPES</a>
-      <a href="#about">ABOUT</a>
-    </nav>
-  </header>
-
-  <main>
-    <section class="hero" id="home">
-      <div class="hero-shade"></div>
-      <div class="hero-content">
-        <p class="eyebrow">A PERSONAL COLLECTION OF LIFE'S JOURNEYS</p>
-        <h1>THE WORLD IS<br><span>WAITING.</span></h1>
-        <p class="hero-copy">Roads to travel. Places to discover. Moments worth remembering.</p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#adventures">EXPLORE STORIES</a>
-          <a class="button button-outline" href="#gallery">VIEW GALLERY</a>
-        </div>
-      </div>
-      <div class="hero-label">ADVENTURE • CAMPING • MEMORIES</div>
-    </section>
-
-    <section class="intro section-wrap">
-      <p class="eyebrow">WELCOME TO MY WORLD</p>
-      <h2>Every journey has a <span>story.</span></h2>
-      <p>This is my personal corner of the internet — a place for photographs, motorcycle adventures, camping trips and diary entries. Pull up a chair and have a look around.</p>
-    </section>
-
-    <section class="section-wrap" id="gallery">
-      <div class="section-heading">
-        <div><p class="eyebrow">THE MOMENTS WE KEEP</p><h2>Photo <span>gallery</span></h2></div>
-        <p class="section-note">A few frames from the journey.</p>
-      </div>
-      <div class="gallery-grid" id="galleryGrid"></div>
-    </section>
-
-    <section class="dark-band" id="adventures">
-      <div class="section-wrap">
-        <div class="section-heading">
-          <div><p class="eyebrow">OUT ON THE ROAD</p><h2>Travel & <span>adventures</span></h2></div>
-          <p class="section-note">Routes, campsites and memories made along the way.</p>
-        </div>
-        <div class="story-grid" id="adventureGrid"></div>
-      </div>
-    </section>
-
-    <section class="section-wrap" id="diary">
-      <div class="section-heading">
-        <div><p class="eyebrow">NOTES FROM EVERYDAY LIFE</p><h2>From my <span>diary</span></h2></div>
-        <p class="section-note">Thoughts, experiences and little pieces of history.</p>
-      </div>
-      <div class="diary-list" id="diaryList"></div>
-    </section>
-
-    <section class="about section-wrap" id="about">
-      <div class="about-symbol">P.</div>
-      <div>
-        <p class="eyebrow">A LITTLE ABOUT ME</p>
-        <h2>Hello, I'm <span>Pita.</span></h2>
-        <p>Welcome to my personal website. I created this space to keep my photographs, travel stories, camping adventures and memories together. This is a work in progress, and the best stories are still being written.</p>
-        <a class="text-link" href="mailto:hello@example.com">GET IN TOUCH ↗</a>
-        <p class="small-note">Remember to replace this example email address with your own before publishing.</p>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <a class="brand" href="#home"><span class="brand-mark">P</span><span>PITA'S <b>WORLD</b></span></a>
-    <p>Made with care. Powered by memories.</p>
-    <p class="copyright">© <span id="year"></span> Pita's World</p>
-  </footer>
-
-  <dialog id="photoDialog" class="photo-dialog">
-    <button class="dialog-close" id="dialogClose" aria-label="Close">×</button>
-    <img id="dialogImage" src="" alt="">
-    <p id="dialogCaption"></p>
-  </dialog>
-
-  <script src="script.js"></script>
-</body>
-</html>
+<header class="site-header">
+<a class="brand" href="/"><span class="brand-mark">P</span><span>LIFE WITH <b>PIETER SWART</b></span></a>
+<button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰ MENU</button>
+<nav>
+<a href="/">HOME</a>
+<a href="/gallery/">GALLERY</a>
+<a href="/adventures/">ADVENTURES</a>
+<a href="/diary/">DIARY</a>
+<a href="/treasure-maps/">TREASURE MAPS</a>
+<a href="/recipes/">RECIPES</a>
+<a href="/search/">SEARCH</a>
+</nav>
+</header>
+<main>
+<section class="hero">
+<div class="hero-inner">
+<p class="eyebrow">A PERSONAL CHRONICLE</p>
+<h1>Life is a journey.<br><span>Keep the memories.</span></h1>
+<p class="lead">A growing collection of everyday moments, family memories, open roads, camping adventures, recipes and discoveries.</p>
+<div class="actions">
+<a class="button primary" href="/diary/">READ THE DIARY</a>
+<a class="button" href="/gallery/">EXPLORE THE GALLERY</a>
+</div>
+</div>
+</section>
+<section class="section wrap">
+<div class="section-heading">
+<div><p class="eyebrow">EXPLORE THE WEBSITE</p><h2>Many paths. <span>One story.</span></h2></div>
+<p class="muted">Choose a collection and make yourself at home.</p>
+</div>
+<div class="grid">
+<a class="card" href="/gallery/"><div class="symbol">▧</div><h3>Photo Gallery</h3><p>Albums ready for photographs of family, places, holidays and special memories.</p><span class="pill">PHOTO COLLECTION</span></a>
+<a class="card" href="/adventures/"><div class="symbol">⌁</div><h3>Adventures</h3><p>Motorcycle journeys, camping, routes, destinations and places still waiting to be explored.</p><span class="pill">ROAD & OUTDOORS</span></a>
+<a class="card" href="/diary/"><div class="symbol">▤</div><h3>The Diary</h3><p>Read the illustrated entries and follow the everyday story as it unfolds.</p><span class="pill">PERSONAL CHRONICLE</span></a>
+<a class="card" href="/recipes/"><div class="symbol">♨</div><h3>Recipe Collection</h3><p>Browse and search the collection of original recipe PDFs.</p><span class="pill">36 RECIPES</span></a>
+<a class="card" href="/treasure-maps/"><div class="symbol">⌖</div><h3>Treasure Maps</h3><p>Explore the map collection and the illustrated Forgotten Valley map.</p><span class="pill">11 MAP PDFs + ILLUSTRATED MAP</span></a>
+<a class="card" href="/search/"><div class="symbol">⌕</div><h3>Search Everything</h3><p>Search the website's diary entries, recipes, maps and other collections.</p><span class="pill">SITE SEARCH</span></a>
+</div>
+</section>
+<section class="section wrap">
+<div class="section-heading">
+<div><p class="eyebrow">THE WRITTEN MEMORIES</p><h2>From the <span>diary</span></h2></div>
+<a class="button" href="/diary/">ALL ENTRIES</a>
+</div>
+<div class="grid">
+<a class="card" href="/diary/entry-002/"><span class="pill">19 NOVEMBER 2026</span><h3>A Quiet Day as the Year Slowly Draws to a Close</h3><p>The second illustrated diary entry.</p></a>
+<a class="card" href="/diary/entry-001/"><span class="pill">17 NOVEMBER 2026</span><h3>A Warm Day, Family Matters and a First Job Interview</h3><p>The first illustrated diary entry.</p></a>
+</div>
+</section>
+<section class="section wrap">
+<p class="eyebrow">ABOUT THIS WEBSITE</p>
+<h2>A place to keep <span>what matters.</span></h2>
+<p class="lead">Life With Pieter Swart is a personal website for preserving memories and collecting the things that make life interesting. It will grow over time as photographs, stories and new adventures are added.</p>
+</section>
+</main>
+<footer><div class="brand">LIFE WITH <b>PIETER SWART</b></div><p>Made with care. Powered by memories.</p><p>© <span id="year"></span> Life With Pieter Swart</p></footer>
+<script src="/site.js"></script>
+</body></html>

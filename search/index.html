@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Search diaries, recipes and treasure maps on Life With Pieter Swart.">
+<title>Search | Life With Pieter Swart</title><link rel="stylesheet" href="/style.css"></head>
+<body><header class="site-header"><a class="brand" href="/"><span class="brand-mark">P</span><span>LIFE WITH <b>PIETER SWART</b></span></a>
+<button class="menu-toggle" aria-expanded="false">☰ MENU</button><nav>
+<a href="/">HOME</a>
+<a href="/gallery/">GALLERY</a>
+<a href="/adventures/">ADVENTURES</a>
+<a href="/diary/">DIARY</a>
+<a href="/treasure-maps/">TREASURE MAPS</a>
+<a href="/recipes/">RECIPES</a>
+<a href="/search/">SEARCH</a>
+</nav></header>
+<main class="wrap"><section class="page-hero"><p class="eyebrow">FIND SOMETHING</p><h1>Search <span>the website</span></h1>
+<p class="lead">Search the diary, recipe PDFs, treasure maps and illustrated map.</p>
+<input class="searchbox" id="q" type="search" placeholder="Type a title, place or keyword..." aria-label="Search website">
+<p class="muted" id="count" aria-live="polite">Loading search index…</p></section>
+<section id="results"></section></main>
+<footer>© <span id="year"></span> Life With Pieter Swart</footer>
+<script src="/site.js"></script>
+<script>
+(async()=>{
+ const box=document.getElementById("q"), out=document.getElementById("results"), count=document.getElementById("count");
+ let data=[];
+ try {
+  const response=await fetch("/search/search-index.json");
+  if(!response.ok) throw new Error("Search index unavailable");
+  data=await response.json();
+  count.textContent=data.length+" searchable items";
+ } catch(e) { count.textContent="The search index could not be loaded."; return; }
+ function run(){
+  const term=box.value.trim().toLowerCase();
+  const found=data.filter(x=>(x.title+" "+x.category+" "+x.detail).toLowerCase().includes(term));
+  count.textContent=found.length+" result(s)";
+  out.innerHTML=found.map(x=>"<article class='result'><span class='pill'>"+safe(x.category)+"</span><h3><a href='"+safe(x.url)+"'>"+safe(x.title)+"</a></h3><p class='muted'>"+safe(x.detail)+"</p></article>").join("");
+  if(!found.length) out.innerHTML="<p class='notice'>No matching items. Try another search.</p>";
+ }
+ function safe(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+ box.addEventListener("input",run); run();
+})();
+</script></body></html>
