@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700">
+<defs>
+ <linearGradient id="paper" x2="0.8" y2="1">
+  <stop stop-color="#f5dfaa"/>
+  <stop offset="1" stop-color="#b98b50"/>
+ </linearGradient>
+ <filter id="rough">
+  <feTurbulence baseFrequency=".035" numOctaves="3" seed="8"/>
+  <feDisplacementMap in="SourceGraphic" scale="3"/>
+ </filter>
+</defs>
+<rect width="1000" height="700" rx="20" fill="#392719"/>
+<rect x="22" y="22" width="956" height="656" rx="18" fill="url(#paper)" stroke="#6c4728" stroke-width="12"/>
+<rect x="43" y="43" width="914" height="614" rx="10" fill="none" stroke="#8b6036" stroke-width="3" stroke-dasharray="7 8"/>
+<g fill="none" stroke="#76532f" stroke-width="5" opacity=".8">
+ <path d="M85 190 Q160 120 230 180 T380 160 T530 190"/>
+ <path d="M90 470 Q180 420 270 475 T440 455 T590 485"/>
+ <path d="M520 100 Q590 150 660 110 T850 140"/>
+</g>
+<!-- mountains -->
+<g fill="#98734b" stroke="#573c27" stroke-width="5">
+ <path d="M90 285 L205 110 L300 285Z"/>
+ <path d="M190 285 L340 85 L475 285Z"/>
+ <path d="M365 280 L500 130 L625 280Z"/>
+</g>
+<g fill="#f2e2bf" stroke="#76532f" stroke-width="3">
+ <path d="M205 110 L178 154 L207 145 L225 165 L240 145Z"/>
+ <path d="M340 85 L307 133 L342 119 L363 145 L378 130Z"/>
+ <path d="M500 130 L476 163 L503 154 L521 173 L539 159Z"/>
+</g>
+<!-- river -->
+<path d="M115 360 C230 310 260 420 370 365 S530 300 600 380 S760 460 870 360" fill="none" stroke="#567d79" stroke-width="23" opacity=".85"/>
+<path d="M115 360 C230 310 260 420 370 365 S530 300 600 380 S760 460 870 360" fill="none" stroke="#d6d0a2" stroke-width="3" stroke-dasharray="12 12"/>
+<!-- forest -->
+<g fill="#52613b" stroke="#3b472c" stroke-width="3">
+ <path d="M115 520 l30 -85 30 85z M125 490 l20 -65 20 65z"/>
+ <path d="M190 560 l35 -100 35 100z M202 520 l23 -75 23 75z"/>
+ <path d="M720 245 l35 -100 35 100z M733 205 l22 -75 22 75z"/>
+ <path d="M810 285 l35 -100 35 100z M823 245 l22 -75 22 75z"/>
+ <path d="M760 550 l35 -100 35 100z M773 510 l22 -75 22 75z"/>
+</g>
+<!-- dotted route -->
+<path d="M190 580 C260 540 270 465 360 450 S480 490 525 405 S650 320 700 390 S790 425 850 315" fill="none" stroke="#a13e28" stroke-width="9" stroke-linecap="round" stroke-dasharray="2 22"/>
+<!-- ruins -->
+<g fill="#a37b4b" stroke="#62462d" stroke-width="4">
+ <path d="M635 475 V410 H690 V475Z M625 410 L662 380 L700 410Z"/>
+ <path d="M650 475 V435 H675 V475Z"/>
+</g>
+<!-- X -->
+<g stroke="#a51f18" stroke-width="14" stroke-linecap="round">
+ <path d="M820 275 l55 55 M875 275 l-55 55"/>
+</g>
+<text x="850" y="245" text-anchor="middle" font-family="serif" font-size="27" font-weight="bold" fill="#79291c">TREASURE</text>
+<!-- compass -->
+<g transform="translate(850 530)">
+ <circle r="78" fill="#e6c995" stroke="#65482b" stroke-width="7"/>
+ <circle r="65" fill="none" stroke="#65482b" stroke-width="2"/>
+ <path d="M0 -57 L13 0 0 57 -13 0Z" fill="#69472b"/>
+ <path d="M-57 0 L0 -13 57 0 0 13Z" fill="#9c3425"/>
+ <circle r="8" fill="#e9d6a8"/>
+ <text x="0" y="-88" text-anchor="middle" font-size="23" font-family="serif" fill="#513820">N</text>
+</g>
+<text x="500" y="625" text-anchor="middle" font-family="serif" font-size="34" font-style="italic" fill="#573a24">THE FORGOTTEN VALLEY</text>
+<text x="500" y="652" text-anchor="middle" font-family="serif" font-size="15" letter-spacing="5" fill="#69482b">AN ILLUSTRATED ADVENTURE MAP</text>
+</svg>
